@@ -1,0 +1,44 @@
+body {
+    background: #E7F6FD;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    display: none;
+}
+
+.ship {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 60px;
+    height: 100px;
+    background-image: url("ship.svg");
+    background-size: cover;
+    will-change: left, bottom;
+}
+
+.statistic {
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    right: 50px;
+    color: #F9A983;
+    text-align: right;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+.asteroid {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    list-style: none;
+    background: url("asteroid.svg");
+    background-size: cover;
+}
