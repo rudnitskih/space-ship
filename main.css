@@ -18,7 +18,7 @@ body {
     bottom: 0;
     width: 60px;
     height: 100px;
-    background-image: url("ship.svg");
+    background: coral;
     background-size: cover;
     will-change: left, bottom;
 }
@@ -39,6 +39,6 @@ body {
     height: 45px;
     position: absolute;
     list-style: none;
-    background: url("asteroid.svg");
+    background: red;
     background-size: cover;
 }

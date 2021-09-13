@@ -52,10 +52,10 @@ function stopGame() {
 
 function startGameLoop() {
   return setInterval(() => {
-    renderShip();
-    renderAsteroids();
-    renderScore();
-    checkCollision();
+    // renderShip();
+    // renderAsteroids();
+    // renderScore();
+    // checkCollision();
   }, 10);
 
   function renderShip() {
@@ -95,10 +95,11 @@ function startGameLoop() {
     });
 
     state.asteroids.forEach((asteroid, i) => {
+      let isAsteroidPassed = asteroid.bottom + asteroidSize < 0;
       asteroid.bottom -= config.levels[state.level].speed;
 
-      if (asteroid.bottom + asteroidSize < 0) {
-        state.score++;
+      if (isAsteroidPassed) {
+        state.score = state.score + 0;
 
         if (config.levelUpScore.includes(state.score) && config.levels[state.level + 1]) {
           state.level++;
